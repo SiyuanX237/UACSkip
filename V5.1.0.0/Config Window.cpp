@@ -577,14 +577,6 @@ LRESULT CALLBACK Page3Proc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam
 			RectDrawText.bottom = RectDrawText.top + g_FontSize.cy * 1.3;
 			DrawText(hdc, TEXT("UACSkip是个免费软件，您可以自由地分发、复制与运行于任何非商业用途"), -1, &RectDrawText, DT_LEFT | DT_SINGLELINE);
 
-			/*RectDrawText.top += g_FontSize.cy * 2;
-			RectDrawText.bottom += g_FontSize.cy * 2;
-			DrawText(hdc, TEXT("本软件由 Bilibili-个人隐思 用心打造"), -1, &RectDrawText, DT_LEFT | DT_SINGLELINE);*/
-
-			/*RectDrawText.top += g_FontSize.cy * 2;
-			RectDrawText.bottom += g_FontSize.cy * 2;
-			DrawText(hdc, TEXT("如果觉得对您有所帮助，不妨赞助一下我，以支持我更多创作"), -1, &RectDrawText, DT_LEFT | DT_SINGLELINE);*/
-
 			EndPaint(hwnd, &ps);
 			SelectObject(hdc, OldFont);
 			break;
