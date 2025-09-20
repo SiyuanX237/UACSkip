@@ -51,5 +51,6 @@
 [新一代UAC白名单工具](https://www.bilibili.com/video/BV1hpudz7EN1/)
 
 ## 图文介绍
+[UACSkip V5.3.0.0发布 （2025.9.21更新）](https://www.bilibili.com/opus/1114770800496345088 "图文介绍")
 
 # 祝您使用愉快！
