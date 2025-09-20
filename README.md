@@ -1,4 +1,4 @@
-# UACSkip
+# UACSkip(v5.3.0.0)
 
 ### 新版UAC白名单工具，支持UI配置界面
 ### 作者：[Bilibili - 个人隐思](https://space.bilibili.com/1081364881 "来我主页玩玩ヾ(^∀^)ﾉ")
@@ -17,18 +17,18 @@
 ## 快速开始
 
 #### 任务计划模式：
-![image](/images/config.png)
+![image](/images/config-new.png)
  - 首次使用先安装服务
- - 再选取一个exe、bat或lnk文件，并调整参数
- - 点击创建按钮即可快捷生成免弹窗快捷方式
+ - 再选取任意文件，并调整参数
+ - 点击创建按钮即可快捷生成管理员权限免弹窗快捷方式
 
-配置完成后可在任意需要管理员权限的程序路径前加上 **%UACSkip%** 以调用本功能
+配置完成后可在任意需要管理员权限执行的文件路径前加上 **%UACSkip%** 以调用本功能
 ![image](/images/application.png)
 
 ```c++
-%UACSkip% 任意程序 任意参数
+%UACSkip% 任意文件 任意参数
 ```
-我们还支持把功能集成到exe右键上
+我们还支持把功能集成到右键上
 
 <img src="/images/before.png" height="300" /> => <img src="/images/after.png" height="300" />
 
@@ -50,5 +50,6 @@
 
 [新一代UAC白名单工具](https://www.bilibili.com/video/BV1hpudz7EN1/)
 
+## 图文介绍
 
 # 祝您使用愉快！
