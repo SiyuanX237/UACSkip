@@ -1118,7 +1118,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 			NULL
 		);
 		SendMessage(g_ButtonHwnd1_ContextMenu, WM_SETFONT, (WPARAM)g_EditFont, 0);
-		CreatePointToolTip(g_PageHwnd[0], g_ButtonHwnd1_ContextMenu, TEXT("点此将在注册表HKEY_CLASSES_ROOT\\exefile\\shell处\n新建/移除\"UACSkip\"项"), TEXT("提示"), true, TTI_NONE, NULL, NULL);
+		CreatePointToolTip(g_PageHwnd[0], g_ButtonHwnd1_ContextMenu, TEXT("点此将在注册表HKEY_CLASSES_ROOT\\*\\shell处\n新建/移除\"UACSkip\"项"), TEXT("提示"), true, TTI_NONE, NULL, NULL);
 		if (TaskInstalled)
 		{
 			RegInstalled = CheckReg();
@@ -1222,7 +1222,7 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 		SendMessage(g_ButtonHwnd2_OpenRegedit, WM_SETFONT, (WPARAM)g_EditFont, 0);
 
 
-		CreatePointToolTip(g_PageHwnd[0], NULL, TEXT("0.先安装任务计划服务(若移动本程序需重新更新安装)\n1.选取欲加入UAC白名单的程序\n2.重命名待生成的快捷方式名\n3.选填剩下三项后创建快捷方式"), TEXT("提示"), true, TTI_INFO_LARGE, NULL, 8000, &g_HelpRect);
+		CreatePointToolTip(g_PageHwnd[0], NULL, TEXT("0.先安装任务计划服务(若移动本程序需重新更新安装)\n1.选取欲加入UAC白名单的文件\n2.重命名待生成的快捷方式名\n3.选填剩下三项后创建快捷方式"), TEXT("提示"), true, TTI_INFO_LARGE, NULL, 8000, &g_HelpRect);
 		CreatePointToolTip(g_PageHwnd[1], NULL, TEXT("1.添加:选取一个exe再点击\"添加白名单项\"按钮\n2.删除:点击\"打开注册表\"找到目标程序并删除该项"), TEXT("提示"), true, TTI_INFO_LARGE, NULL, 8000, &g_HelpRect);
 
 		INITCOMMONCONTROLSEX icex = { sizeof(icex), ICC_LINK_CLASS };

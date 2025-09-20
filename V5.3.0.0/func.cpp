@@ -118,7 +118,7 @@ BOOL CheckReg()//1为正常,0为不存在,-1为需要更新
 	wstring Value;
 	result = RegOpenKeyEx(
 		HKEY_CLASSES_ROOT,
-		TEXT("exefile\\shell\\UACSkip"),
+		TEXT("*\\shell\\UACSkip"),
 		0,
 		KEY_READ,
 		&hKey
@@ -164,7 +164,7 @@ BOOL CheckReg()//1为正常,0为不存在,-1为需要更新
 
 	result = RegOpenKeyEx(
 		HKEY_CLASSES_ROOT,
-		TEXT("exefile\\shell\\UACSkip\\command"),
+		TEXT("*\\shell\\UACSkip\\command"),
 		0,
 		KEY_READ,
 		&hKey
@@ -205,7 +205,7 @@ bool RegInstall()
 	wstring Path;
 	result = RegCreateKeyExW(
 		HKEY_CLASSES_ROOT,
-		L"exefile\\shell\\UACSkip",
+		L"*\\shell\\UACSkip",
 		0, NULL, 0, KEY_WRITE, NULL, &hKey, NULL);
 	if (result != ERROR_SUCCESS)
 	{
@@ -227,7 +227,7 @@ bool RegInstall()
 		return false;
 	}
 
-	Path = L"以管理员身份运行(&U)";
+	Path = L"以管理员身份执行(&U)";
 	result = RegSetValueEx(
 		hKey,
 		TEXT("MUIVerb"),
@@ -245,7 +245,7 @@ bool RegInstall()
 
 	result = RegCreateKeyExW(
 		HKEY_CLASSES_ROOT,
-		L"exefile\\shell\\UACSkip\\command",
+		L"*\\shell\\UACSkip\\command",
 		0, NULL, 0, KEY_WRITE, NULL, &hKey, NULL);
 	if (result != ERROR_SUCCESS)
 	{
@@ -272,7 +272,7 @@ bool RegInstall()
 
 bool RegUninstall()
 {
-	LONG result = RegDeleteTreeW(HKEY_CLASSES_ROOT, L"exefile\\shell\\UACSkip");
+	LONG result = RegDeleteTreeW(HKEY_CLASSES_ROOT, L"*\\shell\\UACSkip");
 	return (result == ERROR_SUCCESS) ? true : false;
 }
 
