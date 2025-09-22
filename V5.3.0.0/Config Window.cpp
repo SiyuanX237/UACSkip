@@ -585,7 +585,7 @@ LRESULT CALLBACK Page3Proc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam
 
 			RectDrawText.top = g_LineAnchorY[1];
 			RectDrawText.bottom = RectDrawText.top + g_FontSize.cy * 1.3;
-			DrawText(hdc, TEXT("版本：5.3.0.0                日期：2025.9.20"), -1, &RectDrawText, DT_LEFT | DT_SINGLELINE);
+			DrawText(hdc, TEXT("版本：5.3.0.0                日期：2025.9.21"), -1, &RectDrawText, DT_LEFT | DT_SINGLELINE);
 			MoveToEx(hdc, g_PageRect.left + g_FontSize.cx * 2, g_FontSize.cy + g_FontSize.cx * 4 + g_FontSize.cy, NULL);
 			LineTo(hdc, g_PageRect.right - g_FontSize.cx * 2, g_FontSize.cy + g_FontSize.cx * 4 + g_FontSize.cy);
 			
@@ -1363,4 +1363,5 @@ void Config()
 		DispatchMessage(&msg);
 	}
 #endif
+
 }
