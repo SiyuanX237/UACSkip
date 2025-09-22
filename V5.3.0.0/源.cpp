@@ -279,35 +279,6 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevIntance, LPSTR szCmdline,
 			}
 
 
-			//hMap = OpenFileMapping(FILE_MAP_ALL_ACCESS, FALSE, L"Local\\UACSKIPShare");
-			//hMutex = CreateMutex(NULL, FALSE, L"Local\\UACSKIPShareMutex");
-			//loop2:
-			//if (WaitForSingleObject(hMutex, 1000) != WAIT_OBJECT_0)
-			//{
-			//	return 0;
-			//}
-			//SharedQueue* queue = (SharedQueue*)MapViewOfFile(hMap, FILE_MAP_ALL_ACCESS, 0, 0, sizeof(SharedQueue));
-			//if (queue->ready == false)
-			//{
-			//	ReleaseMutex(hMutex);
-			//	goto loop2;
-			//}
-			//hEvent = OpenEventW(EVENT_MODIFY_STATE, FALSE, L"Local\\UACSKIPShareEvent");
-			//SetEvent(hEvent);
-			//ForceSetForeground(g_MainHwnd);
-			//SHELLEXECUTEINFO sei = { 0 };
-			//sei.cbSize = sizeof(sei);
-			//sei.lpVerb = L"runas"; // 提权
-			//sei.nShow = SW_SHOWNORMAL;
-			//sei.lpFile = (const wchar_t*)queue->Path;
-			//sei.lpParameters = (const wchar_t*)queue->Param;
-			//ShellExecuteEx(&sei);
-
-			//ReleaseMutex(hMutex);
-			//CloseHandle(hMutex);
-			//CloseHandle(hEvent);
-			//UnmapViewOfFile(queue);//释放虚拟内存映射
-			//CloseHandle(hMap);//释放内核对象
 		}
 		
 	}

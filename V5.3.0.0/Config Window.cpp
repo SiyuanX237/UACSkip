@@ -585,7 +585,7 @@ LRESULT CALLBACK Page3Proc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam
 
 			RectDrawText.top = g_LineAnchorY[1];
 			RectDrawText.bottom = RectDrawText.top + g_FontSize.cy * 1.3;
-			DrawText(hdc, TEXT("版本：5.2.0.0                日期：2025.7.28"), -1, &RectDrawText, DT_LEFT | DT_SINGLELINE);
+			DrawText(hdc, TEXT("版本：5.3.0.0                日期：2025.9.20"), -1, &RectDrawText, DT_LEFT | DT_SINGLELINE);
 			MoveToEx(hdc, g_PageRect.left + g_FontSize.cx * 2, g_FontSize.cy + g_FontSize.cx * 4 + g_FontSize.cy, NULL);
 			LineTo(hdc, g_PageRect.right - g_FontSize.cx * 2, g_FontSize.cy + g_FontSize.cx * 4 + g_FontSize.cy);
 			
@@ -1189,21 +1189,6 @@ LRESULT CALLBACK WndProc(HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 		);
 		SendMessage(g_ButtonHwnd2_Execute, WM_SETFONT, (WPARAM)g_EditFont, 0);
 
-		/*g_StaticHwnd2_Help = CreateWindowEx(
-			NULL,
-			TEXT("static"),
-			TEXT("帮助"),
-			WS_VISIBLE | WS_CHILD | WS_BORDER | SS_CENTER | SS_NOTIFY,
-			g_PageRect.right - g_PageRect.left - g_FontSize.cx * 4.5,
-			g_LineAnchorY[0] - g_FontSize.cy * 0.5,
-			g_FontSize.cx * 3,
-			g_FontSize.cy * 1.5,
-			g_PageHwnd[1],
-			NULL,
-			NULL,
-			NULL
-		);
-		SendMessage(g_StaticHwnd2_Help, WM_SETFONT, (WPARAM)g_EditFont, 0);*/
 
 		g_ButtonHwnd2_OpenRegedit = CreateWindowEx(
 			NULL,
