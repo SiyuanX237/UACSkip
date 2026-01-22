@@ -1,4 +1,4 @@
-# UACSkip(v5.3.0.0)
+# UACSkip(v5.3.1.0 最新版)
 
 ### 新版UAC白名单工具，支持UI配置界面
 ### 作者：[Bilibili - 个人隐思](https://space.bilibili.com/1081364881 "来我主页玩玩ヾ(^∀^)ﾉ")
